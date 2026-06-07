@@ -644,12 +644,12 @@ https://templatemo.com/tm-535-softy-pinko
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
-    <!-- التعديل الثاني: إضافة كود JavaScript لاستدعاء الـ API باستخدام اسم الحاوية -->
+    <!-- التعديل الثاني: إضافة كود JavaScript لاستدعاء الـ API باستخدام localhost (صحيح للمتصفح) -->
     <script>
         $(function() {
             $.ajax({
                 type: "GET",
-                url: "http://softy-pinko-back-end-task3:5252/api/hello",
+                url: "http://localhost:5252/api/hello",
                 success: function(data) {
                     console.log(data);
                     $('#dynamic-content').text(data);
