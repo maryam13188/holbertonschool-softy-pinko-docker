@@ -644,12 +644,12 @@ https://templatemo.com/tm-535-softy-pinko
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
-    <!-- تم تعديل الرابط ليستخدم localhost بدلاً من back-end للاتصال بالـ API من المتصفح -->
+    <!-- تم تعديل الرابط لاستخدام المسار النسبي /api/hello بدلاً من localhost:5252 ليتوافق مع الـ proxy في المهمة 5 -->
     <script>
         $(function() {
             $.ajax({
                 type: "GET",
-                url: "http://localhost:5252/api/hello",
+                url: "/api/hello",
                 success: function(data) {
                     console.log(data);
                     $('#dynamic-content').text(data);
