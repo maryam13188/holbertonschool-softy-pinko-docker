@@ -3,7 +3,6 @@ services:
     build:
       context: ./back-end
       dockerfile: Dockerfile
-    # تم إزالة ports: - "5252:5252"
     networks:
       - softy-pinko-network
 
@@ -11,7 +10,6 @@ services:
     build:
       context: ./front-end
       dockerfile: Dockerfile
-    # تم إزالة ports: - "9000:9000"
     depends_on:
       - back-end
     networks:
@@ -26,6 +24,7 @@ services:
     depends_on:
       - front-end
       - back-end
+    restart: on-failure 
     networks:
       - softy-pinko-network
 
